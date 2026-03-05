@@ -60,3 +60,35 @@ const fetchUsers=async()=>{
   const data=await res.json();
   displayUsers(data);
 }
+//arrow function
+const sumArray = (arr) => {
+  return arr.reduce((sum, value) => sum + value, 0);
+};
+
+// Ví dụ
+const numbers = [1, 2, 3, 4, 5];
+console.log(sumArray(numbers));
+
+const btn=document.getElementById("btn");
+const text=document.getElementById("text");
+btn.addEventListener("click",()=>{
+    text.innerText="Hello openlad";
+});
+async function fetchData(){
+const res=await fetch("https://jsonplaceholder.typicode.com/users");
+const data= await res.json();
+  data.forEach(user=>{
+    console.log(user.name);
+  });
+
+}
+async function getUsers() {
+  const res=await fetch("https://jsonplaceholder.typicode.com/users");
+  const data=await res.json();
+  console.log(data);
+}
+const Sumarr=(arr)=>{
+  return arr.reduce((sum,value)=>sum+value,0);
+}
+const sum=[1,2,3,4,5];
+console.log(Sumarr(sum));
